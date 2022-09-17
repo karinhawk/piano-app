@@ -1,18 +1,18 @@
 import React from 'react'
 import PianoKey from '../../components/PianoKey/PianoKey'
-import C3 from "../../audio/C3.aiff";
-import Db3 from "../../audio/Db3.aiff";
-import D3 from "../../audio/D3.aiff";
-import Eb3 from "../../audio/Eb3.aiff";
-import E3 from "../../audio/E3.aiff";
-import F3 from "../../audio/F3.aiff";
-import Gb3 from "../../audio/Gb3.aiff";
-import G3 from "../../audio/G3.aiff";
-import Ab3 from "../../audio/Ab3.aiff";
-import A3 from "../../audio/A3.aiff";
-import Bb3 from "../../audio/Bb3.aiff";
-import B3 from "../../audio/B3.aiff";
-import C4 from "../../audio/C4.aiff";
+import C3 from "../../audio/C3.mp3";
+import Db3 from "../../audio/Db3.mp3";
+import D3 from "../../audio/D3.mp3";
+import Eb3 from "../../audio/Eb3.mp3";
+import E3 from "../../audio/E3.mp3";
+import F3 from "../../audio/F3.mp3";
+import Gb3 from "../../audio/Gb3.mp3";
+import G3 from "../../audio/G3.mp3";
+import Ab3 from "../../audio/Ab3.mp3";
+import A3 from "../../audio/A3.mp3";
+import Bb3 from "../../audio/Bb3.mp3";
+import B3 from "../../audio/B3.mp3";
+import C4 from "../../audio/C4.mp3";
 
 
 import "./Piano.scss"

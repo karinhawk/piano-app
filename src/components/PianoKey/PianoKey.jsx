@@ -1,20 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 import "./PianoKey.scss"
+import useSound from 'use-sound';
 
 const PianoKey = (props) => {
 
-    const [isPlaying, setIsPlaying] = useState(false);
-
     const {note} = props;
-
-    const playNote = () => {
-        setIsPlaying(true);
-    }
-
+    const [playNote]  = useSound(note);
 
   return (
-    <div className='key' onClick={playNote}>
+    <div className='key-div' onClick={playNote}>
     </div>
   )
 }
