@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import "./PianoKey.scss"
 import useSound from 'use-sound';
 
@@ -6,25 +7,17 @@ const PianoKey = (props) => {
 
     const {note, keycode, classnames} = props;
     const [playNote]  = useSound(note);
+    const [style, setStyle] = useState("")
 
-    console.log(classnames + " click");
-    // const addStyling = () => {
-    //   let newClassnames = classnames + "click";
-    //   return newClassnames;
-    // }
-    // const removeStyling = () => {
-    //   let newClassnames = classnames - "click";
-    //   return newClassnames;
-    // }
-    // const keypress = (e) => {
-    //     const keySelected = e.key;
-    //     console.log("pressed" + keySelected);
-    //     playNote();
-    // }
-    // onMouseDown={addStyling} onMouseUp={removeStyling}
+    const addStyling = () => {
+      setStyle("click");
+    }
+    const removeStyling = () => {
+      setStyle("");
+    }
 
   return (
-    <div className={classnames} onClick={playNote}>
+    <div className={`${classnames} ${style}`} onClick={playNote} onMouseDown={addStyling} onMouseUp={removeStyling}>
     </div>
   )
 }
