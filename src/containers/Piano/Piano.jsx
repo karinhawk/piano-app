@@ -20,19 +20,19 @@ import "./Piano.scss"
 const Piano = () => {
   return (
     <div className='piano'>
-    <PianoKey className='piano__key c3' note={C3}/>
-    <PianoKey className='piano__key db3' note={Db3}/>
-    <PianoKey className='piano__key d3' note={D3}/>
-    <PianoKey className='piano__key eb3' note={Eb3}/>
-    <PianoKey className='piano__key e3' note={E3}/>
-    <PianoKey className='piano__key f3' note={F3}/>
-    <PianoKey className='piano__key gb3'note={Gb3}/>
-    <PianoKey className='piano__key g3' note={G3}/>
-    <PianoKey className='piano__key ab3' note={Ab3}/>
-    <PianoKey className='piano__key a3' note={A3}/>
-    <PianoKey className='piano__key bb3' note={Bb3}/>
-    <PianoKey className='piano__key b3' note={B3}/>
-    <PianoKey className='piano__key c4' note={C4}/>
+    <PianoKey classnames={"piano__key c3 white"} note={C3} keycode={90}/>
+    <PianoKey classnames={'piano__key db3 black'} note={Db3} keycode={83}/>
+    <PianoKey classnames={'piano__key d3 white'} note={D3} keycode={88}/>
+    <PianoKey classnames={'piano__key eb3 black'} note={Eb3} keycode={68}/>
+    <PianoKey classnames={'piano__key e3 white'} note={E3} keycode={67}/>
+    <PianoKey classnames={'piano__key f3 white'} note={F3} keycode={86}/>
+    <PianoKey classnames={'piano__key gb3 black'}note={Gb3} keycode={71}/>
+    <PianoKey classnames={'piano__key g3 white'} note={G3} keycode={66}/>
+    <PianoKey classnames={'piano__key ab3 black'} note={Ab3} keycode={72}/>
+    <PianoKey classnames={'piano__key a3 white'} note={A3} keycode={78}/>
+    <PianoKey classnames={'piano__key bb3 black'} note={Bb3} keycode={74}/>
+    <PianoKey classnames={'piano__key b3 white'} note={B3} keycode={77}/>
+    <PianoKey classnames={'piano__key c4 white'} note={C4} keycode={"0emcomma"}/>
     </div>
   )
 }

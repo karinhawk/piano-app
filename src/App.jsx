@@ -1,9 +1,9 @@
-import './App.css';
+import './App.scss';
 import Piano from './containers/Piano/Piano';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Piano />
     </div>
   );
