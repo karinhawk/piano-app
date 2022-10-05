@@ -7,11 +7,11 @@ const PianoKey = (props) => {
 
     const {note, keycode, classnames} = props;
     const [playNote]  = useSound(note);
-    const [style, setStyle] = useState("");
+    const [clickStyle, setClickStyle] = useState("");
     
 
-    const addStyling = () => setStyle("click");
-    const removeStyling = () => setStyle("");
+    const addStyling = () => setClickStyle("click");
+    const removeStyling = () => setClickStyle("");
 
     const handleClick = () => {
       playNote();
@@ -26,7 +26,7 @@ const PianoKey = (props) => {
     document.addEventListener("keydown", handleKeyDown, false);
 
   return (
-    <div className={`${classnames} ${style}`} onClick={handleClick} onMouseDown={addStyling} onMouseUp={removeStyling} onKeyDown={handleKeyDown}>
+    <div className={`${classnames} ${clickStyle}`} onClick={handleClick} onMouseDown={addStyling} onMouseUp={removeStyling} onKeyDown={handleKeyDown}>
     </div>
   )
 }

@@ -7,18 +7,21 @@
     border-radius: 10px;
     display: inline-block;
     border: 3px solid rgb(180, 179, 167);
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .white {
     width: 6vw;
     height: 100%;
     z-index: 1;
-    background-color: rgb(248, 248, 243);
+    background-color: rgb(248, 248, 243)!important;
 }
 
 .black {
-    margin-left: -5.2vw;
-    width: 1.5vw;
+    margin-left: -4.7vw;
+    width: 2.5vw;
     transform: translateX(2.5vw);
     height: 35vh;
     z-index: 10;

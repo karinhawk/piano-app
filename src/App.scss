@@ -9,9 +9,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &__main {
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.app__main {
-    display: flex;
-    flex-direction: row;
-}
+
+
