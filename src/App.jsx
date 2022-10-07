@@ -7,31 +7,29 @@ import NavBar from './containers/NavBar/NavBar';
 function App() {
 
   const [toggleIdeas, setToggleIdeas] = useState(false);
-  const [playingMode, setPlayingMode] = useState("keyboard");
+  const [isKeyboard, setIsKeyboard] = useState(true);
 
 const showIdeas = () => {
   setToggleIdeas(!toggleIdeas);
 }
 
-const switchMode = (e) => {
-  if (e.target.value === "mouse"){
-    setPlayingMode("mouse")
-  } else if (e.target.value === "keyboard"){
-    setPlayingMode("keyboard")
+const switchMode = (type) => {
+  if (type === "mouse"){
+    setIsKeyboard(!isKeyboard)
+    console.log("mouse");
+  } else if (type === "keyboard"){
+    setIsKeyboard(isKeyboard)
+    console.log("keys");
   }
-}
-
-const handleChosenMode = () => {
-
 }
 
   return (
     <div className="app">
-      <div className='app__nav' showIdeas={showIdeas} switchMode={switchMode}>
-      <NavBar showIdeas={showIdeas}/>
+      <div className='app__nav' showIdeas={showIdeas}>
+      <NavBar showIdeas={showIdeas} switchMode={switchMode} isKeyboard={isKeyboard}/>
       </div>
       <div className='app__main'>
-      <Piano handleChosenMode={handleChosenMode} />
+      <Piano isKeyboard={isKeyboard} />
       </div>
       {toggleIdeas && <IdeasBar/>}
     </div>

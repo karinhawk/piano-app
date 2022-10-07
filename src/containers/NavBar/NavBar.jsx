@@ -26,8 +26,8 @@ const NavBar = (props) => {
         </Dropdown.Toggle>
         <Dropdown.Menu>
           <div className="dropdown__menu">
-            <Dropdown.Item href="#/mouse-mode" value="mouse" onClick={switchMode}><Mouse /></Dropdown.Item>
-            <Dropdown.Item href="#/keyboard-mode" value="keyboard" onClick={switchMode}><Keyboard /></Dropdown.Item>
+            <Dropdown.Item href="#/mouse-mode" name="mouse" onClick={() => switchMode("mouse")}><Mouse /></Dropdown.Item>
+            <Dropdown.Item href="#/keyboard-mode" name="keyboard" onClick={() => switchMode("keyboard")}><Keyboard /></Dropdown.Item>
           </div>
         </Dropdown.Menu>
       </Dropdown>
