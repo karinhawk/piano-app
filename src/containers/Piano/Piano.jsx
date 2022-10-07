@@ -18,24 +18,24 @@ import C4 from "../../audio/C4.mp3";
 import "./Piano.scss"
 import KEYBOARD from '../../Keyboard';
 
-const Piano = () => {
+const Piano = ({ handleChosenMode }) => {
 
 
   return (
     <div className='piano'>
-    <PianoKey classnames={`piano__key c3 white`} note={C3} keycode={KEYBOARD.KEY_Z}/>
-    <PianoKey classnames={`piano__key db3 black`} note={Db3} keycode={KEYBOARD.KEY_S}/>
-    <PianoKey classnames={`piano__key d3 white`} note={D3} keycode={KEYBOARD.KEY_X}/>
-    <PianoKey classnames={`piano__key eb3 black`} note={Eb3} keycode={KEYBOARD.KEY_D} />
-    <PianoKey classnames={'piano__key e3 white'} note={E3} keycode={KEYBOARD.KEY_C}/>
-    <PianoKey classnames={'piano__key f3 white'} note={F3} keycode={KEYBOARD.KEY_V}/>
-    <PianoKey classnames={'piano__key gb3 black'}note={Gb3} keycode={KEYBOARD.KEY_G}/>
-    <PianoKey classnames={'piano__key g3 white'} note={G3} keycode={KEYBOARD.KEY_B} />
-    <PianoKey classnames={'piano__key ab3 black'} note={Ab3} keycode={KEYBOARD.KEY_H} />
-    <PianoKey classnames={'piano__key a3 white'} note={A3} keycode={KEYBOARD.KEY_N} />
-    <PianoKey classnames={'piano__key bb3 black'} note={Bb3} keycode={KEYBOARD.KEY_J}/>
-    <PianoKey classnames={'piano__key b3 white'} note={B3} keycode={KEYBOARD.KEY_M}/>
-    <PianoKey classnames={'piano__key c4 white'} note={C4} keycode={KEYBOARD.COMMA}/>
+    <PianoKey classnames={`piano__key c3 white`} note={C3} keycode={KEYBOARD.KEY_Z} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={`piano__key db3 black`} note={Db3} keycode={KEYBOARD.KEY_S} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={`piano__key d3 white`} note={D3} keycode={KEYBOARD.KEY_X} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={`piano__key eb3 black`} note={Eb3} keycode={KEYBOARD.KEY_D} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key e3 white'} note={E3} keycode={KEYBOARD.KEY_C} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key f3 white'} note={F3} keycode={KEYBOARD.KEY_V} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key gb3 black'}note={Gb3} keycode={KEYBOARD.KEY_G} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key g3 white'} note={G3} keycode={KEYBOARD.KEY_B} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key ab3 black'} note={Ab3} keycode={KEYBOARD.KEY_H} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key a3 white'} note={A3} keycode={KEYBOARD.KEY_N} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key bb3 black'} note={Bb3} keycode={KEYBOARD.KEY_J} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key b3 white'} note={B3} keycode={KEYBOARD.KEY_M} handleChosenMode={handleChosenMode}/>
+    <PianoKey classnames={'piano__key c4 white'} note={C4} keycode={KEYBOARD.COMMA} handleChosenMode={handleChosenMode}/>
     </div>
   )
 }

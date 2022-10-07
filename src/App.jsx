@@ -7,19 +7,31 @@ import NavBar from './containers/NavBar/NavBar';
 function App() {
 
   const [toggleIdeas, setToggleIdeas] = useState(false);
-//toggle showing ideas bar, have a toggle at the bottom, set state as false and when click on toggle do the opposite 
-// showIdeas && {<IdeasBar />}
+  const [playingMode, setPlayingMode] = useState("keyboard");
+
 const showIdeas = () => {
   setToggleIdeas(!toggleIdeas);
 }
 
+const switchMode = (e) => {
+  if (e.target.value === "mouse"){
+    setPlayingMode("mouse")
+  } else if (e.target.value === "keyboard"){
+    setPlayingMode("keyboard")
+  }
+}
+
+const handleChosenMode = () => {
+
+}
+
   return (
     <div className="app">
-      <div className='app__nav' showIdeas={showIdeas}>
-      <NavBar />
+      <div className='app__nav' showIdeas={showIdeas} switchMode={switchMode}>
+      <NavBar showIdeas={showIdeas}/>
       </div>
       <div className='app__main'>
-      <Piano />
+      <Piano handleChosenMode={handleChosenMode} />
       </div>
       {toggleIdeas && <IdeasBar/>}
     </div>

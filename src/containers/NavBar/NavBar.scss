@@ -1,3 +1,4 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 * {
     margin: 0;
     padding: 0;
@@ -10,5 +11,44 @@
     justify-content: space-around;
     align-items: center;
     background-color: rgb(63, 211, 78);
-    
+    color: white;
 }
+
+.dropdown__menu {
+    display: flex;
+}
+
+.dropdown-toggle {
+    background-color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover{
+        background-color: white;
+    }
+    &:active {
+        background-color: white!important;
+    }
+}
+
+.caret-off::before {
+    display: none;
+}
+.caret-off::after {
+    display: none;
+}
+
+.dropdown-item {
+
+    &:hover{
+        background-color: rgb(217, 242, 211);
+        border-radius: 1rem;
+    }
+    &:active{
+        background-color: rgb(174, 231, 148);
+        border-radius: 1rem;
+    }
+}
+
+
