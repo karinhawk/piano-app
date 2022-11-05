@@ -8,6 +8,7 @@ function App() {
 
   const [toggleIdeas, setToggleIdeas] = useState(false);
   const [isKeyboard, setIsKeyboard] = useState(true);
+  const [inputMode, setInputMode] = useState("keyboard");
   
 
 const showIdeas = () => {
@@ -17,9 +18,11 @@ const showIdeas = () => {
 const switchMode = (type) => {
   if (type === "mouse") {
     setIsKeyboard(false);
+    setInputMode("mouse")
     console.log("mouse");
   } else if (type === "keyboard") {
     setIsKeyboard(true);
+    setInputMode("keyboard")
     console.log("keys");
   }
 };
@@ -30,6 +33,7 @@ const switchMode = (type) => {
       <NavBar showIdeas={showIdeas} switchMode={switchMode}/>
       </div>
       <div className='app__main'>
+        <p className='app__alert'>Play with your {inputMode}</p>
       <Piano isKeyboard={isKeyboard} />
       </div>
       {toggleIdeas && <IdeasBar/>}
