@@ -8,25 +8,26 @@ function App() {
 
   const [toggleIdeas, setToggleIdeas] = useState(false);
   const [isKeyboard, setIsKeyboard] = useState(true);
+  
 
 const showIdeas = () => {
   setToggleIdeas(!toggleIdeas);
 }
 
 const switchMode = (type) => {
-  if (type === "mouse"){
-    setIsKeyboard(!isKeyboard)
+  if (type === "mouse") {
+    setIsKeyboard(false);
     console.log("mouse");
-  } else if (type === "keyboard"){
-    setIsKeyboard(isKeyboard)
+  } else if (type === "keyboard") {
+    setIsKeyboard(true);
     console.log("keys");
   }
-}
+};
 
   return (
     <div className="app">
       <div className='app__nav' showIdeas={showIdeas}>
-      <NavBar showIdeas={showIdeas} switchMode={switchMode} isKeyboard={isKeyboard}/>
+      <NavBar showIdeas={showIdeas} switchMode={switchMode}/>
       </div>
       <div className='app__main'>
       <Piano isKeyboard={isKeyboard} />
@@ -35,7 +36,5 @@ const switchMode = (type) => {
     </div>
   );
 }
-
-//pass toggleIdeas as props to Nav then to NavBar then to ToggleButton
 
 export default App;

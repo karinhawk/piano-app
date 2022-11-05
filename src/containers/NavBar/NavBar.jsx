@@ -12,7 +12,7 @@ import "../../components/ToggleButton/ToggleButton.scss";
 
 const NavBar = (props) => {
   const { showIdeas, switchMode } = props;
-  
+
 
   return (
 

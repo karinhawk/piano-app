@@ -23,29 +23,16 @@ const PianoKey = (props) => {
     }
   };
 
-  const checkIsKeyboard = (currentIsKeyboard, click) => {
-    if (!currentIsKeyboard) {
-      click();
-    }
+  if (isKeyboard) {
+    document.addEventListener("keydown", handleKeyDown, false);
+    return <div className={`${classnames} ${clickStyle}`}></div>;
+  } else {
+    document.removeEventListener("keydown", handleKeyDown);
+    return (
+      <div className={`${classnames} ${clickStyle}`} onClick={playNote}></div>
+    );
   }
 
-    // document.addEventListener("keydown", handleKeyDown, false);
-
-    // const handleEventListener = (e) => {
-    // document.addEventListener("keydown", (e) => {
-    //   checkIsKeyboard(isKeyboard, handleKeyDown(e));
-    // })}
-
-
-  
-
-
-  // onMouseDown={!isKeyboard ? addStyling : undefined} onMouseUp={!isKeyboard ? removeStyling : undefined} onKeyDown={() => checkIsKeyboard(isKeyboard, handleKeyDown)}
-
-  return (
-    <div className={`${classnames} ${clickStyle}`} onClick={() => checkIsKeyboard(isKeyboard, handleClick)} onKeyDown={() => checkIsKeyboard(isKeyboard, () => document.addEventListener("keydown", handleKeyDown, false))} >
-    </div>
-  )
 }
 
 export default PianoKey
